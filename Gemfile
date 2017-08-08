@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.7.1'
 # Use sqlite3 as the database for Active Record
 gem 'puma'
-gem 'sqlite3'
+gem 'pg' , '0.20'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -26,6 +26,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt',  '3.1.11'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -37,7 +38,7 @@ gem 'bootstrap-sass', require: true
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+  gem 'byebug',  '9.0.6', platform: :mri
 end
 
 group :development do
@@ -58,5 +59,5 @@ group :test do
 end
 
 group :production do
-  gem 'pg'
+
 end
